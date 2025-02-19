@@ -11,7 +11,7 @@ permissions:
   pull-requests: write
 jobs:
   test:
-    name: test
+    name: test1
     runs-on: ubuntu-latest
     steps:
       - name: Test RAScript Audit
