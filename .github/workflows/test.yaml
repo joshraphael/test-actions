@@ -18,4 +18,4 @@ jobs:
         uses: joshraphael/rascript-audit@7f740ef31574ce6f4a562e053d2df0a59868c838
         with:
           game-id: 4111
-          rascript: 4111.rascript
+          rascript: 4111
