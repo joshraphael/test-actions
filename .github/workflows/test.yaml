@@ -20,3 +20,4 @@ jobs:
           game-id: 4111
           rascript: 4111
           report: true
+          severity: warn
