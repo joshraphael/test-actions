@@ -10,13 +10,8 @@ jobs:
   test:
     name: test2
     runs-on: ubuntu-latest
-    container: ghcr.io/joshraphael/rascript-audit:latest
+    container: ghcr.io/joshraphael/rascript-audit:a8796a396b6efc7feeca584c0ef7cbb4b2b5f5b2
     steps:
       - name: Test RAScript Audit
         run: |
-          go version
-          which go
-          pwd
-          ls
-          export GAME_ID=4111 && cd $HOME && go get -t ./... && go run main.go > $HOME/Installs/RALibretro-x64/RACache/Data/4111-Notes.json
-          cat $HOME/Installs/RALibretro-x64/RACache/Data/4111-Notes.json
+          sh /app/entry.sh
