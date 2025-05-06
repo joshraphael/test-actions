@@ -10,8 +10,11 @@ jobs:
   test:
     name: test2
     runs-on: ubuntu-latest
-    container: ghcr.io/joshraphael/rascript-audit:a8796a396b6efc7feeca584c0ef7cbb4b2b5f5b2
+    container: ghcr.io/joshraphael/rascript-audit:ab898bb415c6665049bacc733faf8f0e8772ebb5
     steps:
       - name: Test RAScript Audit
-        run: |
-          sh /app/entry.sh
+        run: sh /app/entry.sh
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Test RAScript Audit2
+        run: ls
