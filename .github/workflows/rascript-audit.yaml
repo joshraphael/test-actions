@@ -13,4 +13,6 @@ jobs:
     container: ghcr.io/joshraphael/rascript-audit:latest
     steps:
       - name: Test RAScript Audit
-        run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
+        run: |
+          export GAME_ID=4111 && cd $HOME && go get -t ./... && go run main.go > $HOME/Installs/RALibretro-x64/RACache/Data/4111-Notes.json
+          cat $HOME/Installs/RALibretro-x64/RACache/Data/4111-Notes.json
