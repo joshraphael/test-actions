@@ -18,9 +18,8 @@ jobs:
         run: sh /app/entry.sh
       - name: Checkout repo
         uses: actions/checkout@v4
+        path: '$HOME'
       - name: Test RAScript Audit2
-        run: ls
+        run: cd $HOME && ls
       - name: Test RAScript Audit2
-        run: pwd
-      - name: Test RAScript Audit2
-        run: echo $HOME
+        run: cd $HOME && pwd
