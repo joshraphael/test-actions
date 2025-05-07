@@ -20,7 +20,8 @@ jobs:
         run: sh /app/entry.sh
       - name: Checkout repo
         uses: actions/checkout@v4
-        path: '${{env.CONTAINER_HOME}}'
+        with:
+          path: '${{env.CONTAINER_HOME}}'
       - name: Test RAScript Audit2
         run: cd $HOME && ls
       - name: Test RAScript Audit2
