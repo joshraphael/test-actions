@@ -14,11 +14,13 @@ jobs:
       GAME_ID: 4111
     container: ghcr.io/joshraphael/rascript-audit:ab898bb415c6665049bacc733faf8f0e8772ebb5
     steps:
+      - name: Set ENV vars for home
+        run: echo "CONTAINER_HOME=$HOME" >> $GITHUB_ENV
       - name: Test RAScript Audit
         run: sh /app/entry.sh
       - name: Checkout repo
         uses: actions/checkout@v4
-        path: '$HOME'
+        path: '${{env.CONTAINER_HOME}}'
       - name: Test RAScript Audit2
         run: cd $HOME && ls
       - name: Test RAScript Audit2
