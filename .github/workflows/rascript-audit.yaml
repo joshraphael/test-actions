@@ -12,16 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GAME_ID: 4111
-    container: ghcr.io/joshraphael/rascript-audit:1be22ffd34df7f96d8b4cb2fcdcdae121c600dde
+    container: ghcr.io/joshraphael/rascript-audit:bfa42ffcc416b5894de03317333ec489dab4f2e9
     steps:
       - name: Set ENV vars for home
         run: echo "CONTAINER_HOME=$GITHUB_WORKSPACE" >> $GITHUB_ENV
       - name: Test RAScript Audit
         run: sh /app/entry.sh
-      - name: Checkout repo
-        uses: actions/checkout@v4
-        with:
-          path: '${{env.CONTAINER_HOME}}'
       - name: Test RAScript Audit2
         working-directory: ${{env.CONTAINER_HOME}}
         run: ls
