@@ -22,3 +22,5 @@ jobs:
         run: ls
       - name: Test RAScript Audit2
         run: pwd
+      - name: Test RAScript Audit2
+        run: echo $HOME
