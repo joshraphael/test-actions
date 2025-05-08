@@ -14,12 +14,8 @@ jobs:
     name: test1
     runs-on: ubuntu-latest
     steps:
-      - name: test
-        shell: bash
-        run: |
-          echo "SECRET_GITHUB_TOKEN=${{secrets.GITHUB_TOKEN}}" >> "${GITHUB_OUTPUT}"
       - name: Test RAScript Audit
-        uses: joshraphael/rascript-audit@11895cfe5a28a509753b6f9ae372d4b815679109
+        uses: joshraphael/rascript-audit@599fe557095c72ada77a924a1d569d178c4aa1ae
         with:
           game-id: 4111
           rascript: 4111
