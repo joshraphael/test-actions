@@ -18,6 +18,6 @@ jobs:
         uses: joshraphael/rascript-audit@d1327d7494d452da97af2071a4f5321120ae4910
         with:
           game-id: 4111
-          rascript: rascripts/4111.rascript
+          rascript: rascripts/test file.rascript
           report: true
           severity: error
