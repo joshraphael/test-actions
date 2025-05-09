@@ -19,5 +19,5 @@ jobs:
         with:
           game-id: 4111
           rascript: rascripts/test file.rascript
-          report: true
-          severity: error
+          report: false
+          severity: warn
