@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test RAScript Audit
-        uses: joshraphael/rascript-audit@14be73172b4a564e1a5a17d90a89b22e1a6b6ff8
+        uses: joshraphael/rascript-audit@f8444e71bc09da6799b9f96481a2b1f690a420e1
         with:
           game-id: 4111
           rascript: rascripts/4111.rascript
