@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test RAScript Audit
-        uses: joshraphael/rascript-audit@dcbed23f6387e619c7da1f55deb976a12e4ecfee
+        uses: joshraphael/rascript-audit@5fa5cf34a495dc407c53cacd451ceb48b44ab899
         with:
           id: test2
           game-id: 4111
@@ -23,7 +23,7 @@ jobs:
           report: true
           severity: error
       - name: Test RAScript Audit 2
-        uses: joshraphael/rascript-audit@dcbed23f6387e619c7da1f55deb976a12e4ecfee
+        uses: joshraphael/rascript-audit@5fa5cf34a495dc407c53cacd451ceb48b44ab899
         with:
           id: test1
           game-id: 18190
